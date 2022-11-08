@@ -22,11 +22,10 @@ public class ExcelReader {
              try {
             FileInputStream fis = new FileInputStream(filePath);
             book = new XSSFWorkbook(fis);
-        } catch (FileNotFoundException e) {
-                 e.printStackTrace();
         } catch (IOException e) {
-              e.printStackTrace();
-        } }
+                 e.printStackTrace();
+        }
+    }
     public static void getSheet(String sheetName){
           sheet = book.getSheet(sheetName); }
     public static int getRowCount(){
